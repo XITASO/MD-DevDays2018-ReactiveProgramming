@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 
 import { SearchResult } from '../models/search-result';
 import { Character } from '../models/character';
+import 'rxjs/add/observable/from';
 
 @Injectable()
 export class CharacterSearchService {
@@ -29,8 +30,7 @@ export class CharacterSearchService {
      *   "results": [...]
      * }
      */
-    return this.httpClient.get<SearchResult>(url)
-      .map(r => r.results);
+    return Observable.from([]);
   }
 
 }

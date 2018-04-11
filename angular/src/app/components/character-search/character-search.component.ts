@@ -24,9 +24,7 @@ export class CharacterSearchComponent implements OnInit {
   ngOnInit() {
     this.characterForm = new FormControl();
 
-    this.characters = this.characterForm.valueChanges
-      .debounceTime(500)
-      .switchMap(q => this.characterSearchService.getCharactersByName(q));
+    this.characters = Observable.from([]);
   }
 
   public resetAutocomplete(): void {

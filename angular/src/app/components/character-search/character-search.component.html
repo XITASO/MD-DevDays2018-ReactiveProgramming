@@ -14,10 +14,8 @@
   <mat-autocomplete
           #characterAutocomplete="matAutocomplete"
           [displayWith]="displayCharacter">
-    <mat-option
-            *ngFor="let character of (characters | async)"
-            [value]="character">
-      <p>{{ character.name }}</p>
+    <mat-option>
+      <p>Character</p>
     </mat-option>
   </mat-autocomplete>
 </div>

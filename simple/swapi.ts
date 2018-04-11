@@ -11,14 +11,4 @@ const swapi: string = "https://swapi.co/api/people/";
 
 const numberArray: Array<number> = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-Observable.from(numberArray)
-    .map(v => swapi + v)
-    .do(v => console.log(v))
-    .concatMap(v => WebRequest.json(v))
-    .reduce((array: string[], json: any) => { // scan vs reduce
-        array.push(json.name);
-        return array;
-    }, [])
-    .subscribe((value: any) => {
-        console.log(value);
-    });
+
