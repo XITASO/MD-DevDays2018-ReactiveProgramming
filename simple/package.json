@@ -1,0 +1,19 @@
+{
+  "name": "simple-rx",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "compile": "tsc",
+    "watch": "tsc -w"
+  },
+  "author": "Andreas Pfohl",
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^5.5.8",
+    "web-request": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.60",
+    "typescript": "^2.8.1"
+  }
+}
